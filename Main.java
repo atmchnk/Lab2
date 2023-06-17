@@ -16,7 +16,7 @@ public class Main {
         Javalin application = Javalin.create(configuration -> {
             configuration.addStaticFiles("/public", Location.CLASSPATH);
             configuration.accessManager(new ApplicationAccessManager());
-            if (args.length <= 0) {
+            if (args.length <= 1) {
                 Configuration.load(new File(args[0]));
             }
         });
